@@ -11,29 +11,27 @@ button {
   cursor: pointer;
 }
 
-button:active,
-button:focus,
-input:focus,
-input:active {
+:active,
+:focus {
   outline: none;
 }
 
 @font-face {
-  font-family: 'Gilroy Medium';
-  src: url('Gilroy-Medium.eot');
-  src: url('Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
-    url('Gilroy-Medium.woff') format('woff'),
-    url('Gilroy-Medium.ttf') format('truetype');
+  font-family: "Gilroy Medium";
+  src: url("Gilroy-Medium.eot");
+  src: url("Gilroy-Medium.eot?#iefix") format("embedded-opentype"),
+    url("Gilroy-Medium.woff") format("woff"),
+    url("Gilroy-Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gilroy Bold';
-  src: url('Gilroy-Bold.eot');
-  src: url('Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
-    url('Gilroy-Bold.woff') format('woff'),
-    url('Gilroy-Bold.ttf') format('truetype');
+  font-family: "Gilroy Bold";
+  src: url("Gilroy-Bold.eot");
+  src: url("Gilroy-Bold.eot?#iefix") format("embedded-opentype"),
+    url("Gilroy-Bold.woff") format("woff"),
+    url("Gilroy-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -51,18 +49,19 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  margin-top: 40px;
 }
 
 $gray: #828282;
 $black: #070707;
 
 .header {
-  position: fixed;
-  top: 33px;
+  position: sticky;
+  top: 0;
   width: 100%;
   max-width: 997px;
-  margin: auto;
-  padding: 0 26px 32px;
+  margin: 0 auto;
+  padding: 33px 26px 32px;
   border-bottom: 1px solid #828282;
 }
 
@@ -70,18 +69,17 @@ $black: #070707;
   &__list {
     display: flex;
     justify-content: space-between;
-    color: $gray;
     font-size: 18px;
     font-weight: bold;
   }
 
   &__link {
     color: $gray;
-  }
-}
 
-.selected {
-  color: $black;
+    &:focus {
+      color: $black;
+    }
+  }
 }
 
 .banner {
@@ -90,7 +88,6 @@ $black: #070707;
   align-items: flex-end;
   width: 100%;
   max-width: 992px;
-  margin-top: 128px;
   margin-bottom: 104px;
   padding: 0 26px 436px;
   background: url("../images/banner-background-1440-2x.jpg") no-repeat center bottom 0;
@@ -98,17 +95,16 @@ $black: #070707;
 
   &__name {
     font-size: 47.3392px;
-    max-width: 123px;
   }
 
   &__description {
     font-size: 18px;
-    max-width: 156px;
   }
 
   &__lang {
     position: relative;
     bottom: 30px;
+    left: 25px;
     display: flex;
     justify-content: space-between;
     width: 68px;
@@ -122,6 +118,11 @@ $black: #070707;
     &-ru,
     &-en {
       line-height: 16px;
+      color: $gray;
+
+      &:focus {
+        color: $black;
+      }
     }
 
     &:before {
@@ -145,10 +146,11 @@ $black: #070707;
   width: 100%;
   padding: 120px 29px 107px;
   height: 506px;
-  background: #F6F6F6;
+  background: #f6f6f6;
 
   &__title {
     font-size: 34px;
+    line-height: 34px;
     font-weight: bold;
   }
 
@@ -157,6 +159,7 @@ $black: #070707;
     height: 218px;
     font-size: 18px;
     max-width: 490px;
+    height: 50px;
   }
 }
 
@@ -168,7 +171,7 @@ $black: #070707;
   align-content: space-between;
   padding: 91px 74px 111px;
   width: 100%;
-  max-width: 936px+74px*2;
+  max-width: 936px+74px * 2;
   height: 610px;
 
   &__title {
@@ -188,24 +191,45 @@ $black: #070707;
 
   &__adobe-photoshop {
     background: url("../images/adobe-photoshop-logo.svg") no-repeat center top 0;
+
+    .skill__rating {
+      height: 26px;
+      background: url("../images/rating-4.svg") no-repeat center;
+    }
   }
 
   &__adobe-illustrator {
     background: url("../images/adobe-illustrator-logo.svg") no-repeat center top 0;
+
+    .skill__rating {
+      height: 26px;
+      background: url("../images/rating-3.svg") no-repeat center;
+    }
   }
 
   &__adobe-after-effects {
     background: url("../images/adobe-after-effects-logo.svg") no-repeat center top 0;
+
+    .skill__rating {
+      height: 26px;
+      background: url("../images/rating-4.svg") no-repeat center;
+    }
   }
 
   &__figma {
     background: url("../images/figma-logo.svg") no-repeat center top 0;
+
+    .skill__rating {
+      height: 26px;
+      background: url("../images/rating-4.svg") no-repeat center;
+    }
   }
 }
 
 .skill {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   width: 166px;
   height: 206px;
@@ -217,6 +241,17 @@ $black: #070707;
     line-height: 17px;
     width: 80px;
   }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &-star {
+      width: 26px;
+      height: 26px;
+    }
+  }
 }
 
 .portfolio {
@@ -227,11 +262,17 @@ $black: #070707;
   height: 2253px;
   padding: 112px 29px 96px;
   width: 100%;
-  background: #F6F6F6;
+  background: #f6f6f6;
 
   &__title {
     font-size: 34px;
     margin-bottom: 60px;
+  }
+
+  &-proect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   &-layout {
@@ -242,6 +283,7 @@ $black: #070707;
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 99px;
+    color: $black;
     text-decoration: underline;
   }
 }
@@ -267,8 +309,16 @@ $black: #070707;
     height: 42px;
     border-radius: 21px;
     font-size: 18px;
-    color: #FFFFFF;
+    color: #ffffff;
     background: #070707;
+    transition: 1s;
+
+    &:hover {
+      background: #312e2e;
+      text-shadow: 0 0 5px #ffffff;
+      box-shadow: 0 0 50px 20px #312e2e;
+      transition: 1s;
+    }
   }
 
   &__social-networks {
@@ -278,37 +328,51 @@ $black: #070707;
     width: 100%;
   }
 
-  &__linkedln {
+  &__linkedln-link {
     display: block;
     width: 40px;
     height: 40px;
     background: url("../images/linkedIn-logo.svg") no-repeat center/contain;
   }
 
-  &__instagram {
+  &__instagram-link {
     display: block;
     width: 40px;
     height: 40px;
     background: url("../images/instagram-logo.svg") no-repeat center/contain;
   }
 
-  &__behance {
+  &__behance-link {
     display: block;
     width: 40px;
     height: 40px;
     background: url("../images/behance-logo.svg") no-repeat center/contain;
   }
 
-  &__dribble {
+  &__dribble-link {
     display: block;
     width: 40px;
     height: 40px;
     background: url("../images/dribbble-logo.svg") no-repeat center/contain;
   }
 
-  &__bottom {
+  &-bottom {
     text-align: center;
     font-size: 14px;
     color: $gray;
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      width: 240px;
+    }
   }
+
+  &__link {
+    color: $gray;
+  }
+}
+
+a:hover {
+  color: #070707;
 }

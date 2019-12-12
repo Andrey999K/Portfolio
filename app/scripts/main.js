@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-	// Custom JS
-	console.log('Hello, World!');
+  elem = document.querySelectorAll(".nav__link");
+  elem.addEventListener("click", function() {
+    alert("123");
+  });
 });
