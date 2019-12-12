@@ -58,11 +58,8 @@ $black: #070707;
 .header {
   position: sticky;
   top: 0;
+  background: #ffffff;
   width: 100%;
-  max-width: 997px;
-  margin: 0 auto;
-  padding: 33px 26px 32px;
-  border-bottom: 1px solid #828282;
 }
 
 .nav {
@@ -71,6 +68,11 @@ $black: #070707;
     justify-content: space-between;
     font-size: 18px;
     font-weight: bold;
+    width: 100%;
+    max-width: 997px;
+    margin: 0 auto;
+    padding: 33px 26px 32px;
+    border-bottom: 1px solid #828282;
   }
 
   &__link {
