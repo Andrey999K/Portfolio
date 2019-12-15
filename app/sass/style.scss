@@ -141,9 +141,7 @@ $black: #070707;
   }
 }
 
-.hidden {
-  display: none;
-}
+
 
 .banner {
   width: 100%;
@@ -157,7 +155,8 @@ $black: #070707;
     max-width: 944px;
     margin: 0 auto 104px;
     padding-bottom: 436px;
-    background: url("../images/banner-background-1440-2x.jpg") no-repeat center bottom 0;
+    background: url("../images/banner-background-1440-2x.jpg") no-repeat center
+      bottom 0;
     background-size: 943px 387px;
   }
 
@@ -273,7 +272,8 @@ $black: #070707;
   }
 
   &__adobe-illustrator {
-    background: url("../images/adobe-illustrator-logo.svg") no-repeat center top 0;
+    background: url("../images/adobe-illustrator-logo.svg") no-repeat center top
+      0;
 
     .skill__rating {
       height: 26px;
@@ -282,7 +282,8 @@ $black: #070707;
   }
 
   &__adobe-after-effects {
-    background: url("../images/adobe-after-effects-logo.svg") no-repeat center top 0;
+    background: url("../images/adobe-after-effects-logo.svg") no-repeat center
+      top 0;
 
     .skill__rating {
       height: 26px;
@@ -548,7 +549,6 @@ a:hover {
 }
 
 @media (max-width: 580px) {
-
   .banner {
     &__content {
       flex-direction: column;
@@ -567,7 +567,7 @@ a:hover {
   }
 
   .skills {
-    max-width: 288px+74px*2;
+    max-width: 288px+74px * 2;
 
     &__description {
       height: 1068px;
@@ -576,7 +576,6 @@ a:hover {
   }
 
   .portfolio {
-
     &-layout {
       margin-bottom: 36px;
     }
@@ -594,12 +593,12 @@ a:hover {
 }
 
 @media (max-width: 460px) {
-
   .banner {
     &__content {
       // padding-bottom: 478px+38px;
       padding-bottom: 162%;
-      background: url("../images/banner-background-375-2x.jpg") no-repeat center bottom 0;
+      background: url("../images/banner-background-375-2x.jpg") no-repeat center
+        bottom 0;
       background-size: contain;
     }
   }
@@ -612,3 +611,7 @@ a:hover {
     }
   }
 }
+
+.visibile {
+  display: flex;
+} 

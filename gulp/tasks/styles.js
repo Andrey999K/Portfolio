@@ -9,13 +9,16 @@ module.exports = function () {
             .on('error', console.error.bind(console))
             .pipe($.plugins.purgecss({
                 content: ['./build/**/*.html'],
+                whitelistPatterns: [/visibile/]
                 // whitelistPatterns: [/show$/, /mobile$/] // здесь указываешь список селекторов, которые содержат значение
             })) // а этот плагин удаляет ненужные селекторы, если их нет в html файлах отслеживаемой директории
             .pipe($.plugins.autoprefixer({
                 cascade: true
             })) // прописываем вендорные префиксы
             .pipe($.plugins.csso()) // минифицируем стилевой файл
-            .pipe($.plugins.rename({ suffix: '.min' })) // переименовываем
+            .pipe($.plugins.rename({
+                suffix: '.min'
+            })) // переименовываем
             .pipe($.plugins.sourcemaps.write('./')) // записываем карту
             .pipe($.gulp.dest('./build/styles')) // кидаем в директорию сервера
             .pipe($.bs.stream()); // сервер не перезагружается, но изменения вносит 
