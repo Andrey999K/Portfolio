@@ -5,12 +5,14 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+  outline: none;
 }
 
 button {
   cursor: pointer;
 }
 
+*,
 :active,
 :focus {
   outline: none;
@@ -60,9 +62,64 @@ $black: #070707;
   top: 0;
   background: #ffffff;
   width: 100%;
+  z-index: 1;
+
+  &__menu {
+    display: none;
+    width: 33px;
+    height: 19px;
+    background: url("../images/menu-icon.svg") no-repeat center/contain;
+
+    &-close {
+      display: none;
+      width: 23px;
+      height: 23px;
+      background: url("../images/menu-icon-close.svg") no-repeat center/contain;
+    }
+  }
+
+  &__lang {
+    display: none;
+    position: absolute;
+    align-items: center;
+    bottom: 57px;
+    right: -30px;
+    justify-content: space-between;
+    width: 144px;
+    height: 34px;
+    transform: rotate(90deg);
+    font-size: 34px;
+    line-height: 34px;
+    font-weight: bold;
+    color: $gray;
+
+    &-ru,
+    &-en {
+      line-height: 16px;
+      color: $gray;
+
+      &:focus {
+        color: $black;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 55px;
+      width: 4px;
+      height: 30px;
+      background: $black;
+    }
+  }
 }
 
 .nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
   &__list {
     display: flex;
     justify-content: space-between;
@@ -85,15 +142,20 @@ $black: #070707;
 }
 
 .banner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
   width: 100%;
-  max-width: 992px;
-  margin-bottom: 104px;
-  padding: 0 26px 436px;
-  background: url("../images/banner-background-1440-2x.jpg") no-repeat center bottom 0;
-  background-size: 943px 387px;
+  padding: 0 26px;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 944px;
+    margin: 0 auto 104px;
+    padding-bottom: 436px;
+    background: url("../images/banner-background-1440-2x.jpg") no-repeat center bottom 0;
+    background-size: 943px 387px;
+  }
 
   &__name {
     font-size: 47.3392px;
@@ -146,42 +208,48 @@ $black: #070707;
   justify-content: space-between;
   color: $black;
   width: 100%;
-  padding: 120px 29px 107px;
-  height: 506px;
+  padding: 120px 29px 107px-30px;
+  // height: 506px;
   background: #f6f6f6;
 
   &__title {
     font-size: 34px;
     line-height: 34px;
     font-weight: bold;
+    margin-bottom: 30px;
   }
 
   &__text {
     text-align: center;
     height: 218px;
     font-size: 18px;
-    max-width: 490px;
+    max-width: 425px;
     height: 50px;
+    margin-bottom: 30px;
+
+    &:nth-child(4) {
+      max-width: 340px;
+    }
   }
 }
 
 .skills {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   align-content: space-between;
   padding: 91px 74px 111px;
   width: 100%;
   max-width: 936px+74px * 2;
-  height: 610px;
 
   &__title {
     font-size: 34px;
+    margin-bottom: 69px;
   }
 
   &__text {
     font-size: 18px;
+    margin-bottom: 83px;
   }
 
   &__description {
@@ -261,14 +329,17 @@ $black: #070707;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 2253px;
-  padding: 112px 29px 96px;
+  padding: 112px 29px 0;
   width: 100%;
   background: #f6f6f6;
 
   &__title {
     font-size: 34px;
     margin-bottom: 60px;
+  }
+
+  &__list {
+    width: 100%;
   }
 
   &-proect {
@@ -281,7 +352,20 @@ $black: #070707;
     margin-bottom: 45px;
   }
 
-  &__text {
+  &__fashion {
+    max-width: 936px;
+    width: 100%;
+    max-height: 510px;
+  }
+
+  &__reebok,
+  &__braun {
+    max-width: 936px;
+    width: 100%;
+    max-height: 522px;
+  }
+
+  &__link {
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 99px;
@@ -295,15 +379,19 @@ $black: #070707;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 622px;
+  // height: 622px;
+  width: 100%;
   padding: 114px 30px 123px;
 
   &__title {
     font-size: 34px;
+    margin-bottom: 35px;
   }
 
   &__text {
+    text-align: center;
     font-size: 18px;
+    margin-bottom: 30px;
   }
 
   &__send {
@@ -314,6 +402,7 @@ $black: #070707;
     color: #ffffff;
     background: #070707;
     transition: 1s;
+    margin-bottom: 86px;
 
     &:hover {
       background: #312e2e;
@@ -328,6 +417,7 @@ $black: #070707;
     justify-content: space-between;
     max-width: 342px;
     width: 100%;
+    margin-bottom: 45px;
   }
 
   &__linkedln-link {
@@ -377,4 +467,144 @@ $black: #070707;
 
 a:hover {
   color: #070707;
+}
+
+@media (max-width: 1028px) {
+  .skills {
+    max-width: 166px * 2+81px+74px * 2;
+    padding: 83px 74px 98px;
+
+    &__title {
+      margin-bottom: 50px;
+    }
+
+    &__text {
+      margin-bottom: 71px;
+    }
+
+    &__description {
+      height: 206px * 2+81px;
+      align-content: space-between;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    position: fixed;
+    padding: 66px 0 57px;
+    background: none;
+    height: 19px;
+
+    &__menu {
+      display: block;
+    }
+  }
+
+  .nav {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0 30px;
+
+    &__list {
+      display: none;
+      flex-direction: column;
+      font-size: 34px;
+      padding: 0 26px;
+      height: 50vh;
+      border: none;
+    }
+  }
+
+  .main {
+    margin-top: 57px;
+  }
+
+  .banner {
+    &__lang {
+      transform: initial;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .about-me {
+    padding: 81px 29px 76px-30px;
+  }
+
+  .portfolio {
+    padding: 81px 29px 0;
+  }
+
+  .contacts {
+    padding: 82px 30px 123px;
+  }
+}
+
+@media (max-width: 580px) {
+
+  .banner {
+    &__content {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 387px+25px;
+      margin: 0 auto 83px;
+    }
+
+    &__name {
+      margin-bottom: 25px;
+    }
+
+    &__lang {
+      display: none;
+    }
+  }
+
+  .skills {
+    max-width: 288px+74px*2;
+
+    &__description {
+      height: 1068px;
+      justify-content: center;
+    }
+  }
+
+  .portfolio {
+
+    &-layout {
+      margin-bottom: 36px;
+    }
+
+    &__link {
+      margin-bottom: 78px;
+    }
+  }
+
+  .contacts {
+    &__send {
+      margin-bottom: 48px;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+
+  .banner {
+    &__content {
+      // padding-bottom: 478px+38px;
+      padding-bottom: 162%;
+      background: url("../images/banner-background-375-2x.jpg") no-repeat center bottom 0;
+      background-size: contain;
+    }
+  }
+
+  .contacts {
+    padding: 82px 30px 100px;
+
+    &__send {
+      width: 100%;
+    }
+  }
 }

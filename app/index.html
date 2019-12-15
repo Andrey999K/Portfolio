@@ -20,6 +20,12 @@
                 <li class="nav__list-item"><a class="nav__link" href="#portfolio">Portfolio</a></li>
                 <li class="nav__list-item"><a class="nav__link" href="#contacts">Contacts</a></li>
             </ul>
+            <button class="header__menu" onclick="menu()"></button>
+            <button class="header__menu-close" onclick="menu()"></button>
+            <div class="header__lang">
+                <a class="header__lang-ru" href="#" autofocus>RU</a>
+                <a class="header__lang-en" href="#">ENG</a>
+            </div>
         </nav>
     </header>
 
@@ -27,26 +33,28 @@
 
         <a id="home"></a>
         <section class="banner">
-            <h2 class="banner__name">Denis <br>
-                Novik</h2>
-            <p class="banner__description">UX | UI designer <br>
-                24 years old, Minsk</p>
-            <div class="banner__lang">
-                <a class="banner__lang-ru" href="#" autofocus>RU</a>
-                <a class="banner__lang-en" href="#">ENG</a>
+            <div class="banner__content">
+                <h2 class="banner__name">Denis <br>
+                    Novik</h2>
+                <p class="banner__description">UX | UI designer <br>
+                    24 years old, Minsk</p>
+                <div class="banner__lang">
+                    <a class="banner__lang-ru" href="#" autofocus>RU</a>
+                    <a class="banner__lang-en" href="#">ENG</a>
+                </div>
             </div>
         </section>
 
         <a id="about-me"></a>
         <section class="about-me">
             <h2 class="about-me__title">About me</h2>
-            <p class="about-me__text">Hi, I'm Denis – UX/UI designer from Minsk. <br>
+            <p class="about-me__text">Hi, I'm Denis – UX/UI designer from Minsk.
                 I'm interested in design and everything connected with it.</p>
             <p class="about-me__text">
-                I'm studying at courses "Web and mobile design <br>
+                I'm studying at courses "Web and mobile design
                 interfaces" in IT-Academy.</p>
             <p class="about-me__text">
-                Ready to implement excellent projects <br>
+                Ready to implement excellent projects
                 with wonderful people.</p>
         </section>
 
@@ -88,22 +96,22 @@
                 <li class="portfolio__list-item">
                     <article class="portfolio-proect">
                         <img class="portfolio-layout portfolio__fashion" src="./images/portfolio-fashion-1440-2x.jpg"
-                            width="936" height="510" alt=""></img>
-                        <a class="portfolio__text" href="#">Online fashion store - Homepage</a>
+                            alt=""></img>
+                        <a class="portfolio__link" href="#">Online fashion store - Homepage</a>
                     </article>
                 </li>
                 <li class="portfolio__list-item">
                     <article class="portfolio-proect">
                         <img class="portfolio-layout portfolio__reebok" src="./images/portfolio-reebok-1440-2x.jpg"
-                            width="936" height="522" alt=""></img>
-                        <a class="portfolio__text" href="#">Reebok Store - Concept</p>
+                            alt=""></img>
+                        <a class="portfolio__link" href="#">Reebok Store - Concept</p>
                     </article>
                 </li>
                 <li class="portfolio__list-item">
                     <article class="portfolio-proect">
                         <img class="portfolio-layout portfolio__braun" src="./images/portfolio-braun-1440-2x.jpg"
-                            width="936" height="522" alt=""><img />
-                        <a class="portfolio__text" href="#">Braun Landing Page - Concept</a>
+                            alt=""><img />
+                        <a class="portfolio__link" href="#">Braun Landing Page - Concept</a>
                     </article>
                 </li>
             </ul>
@@ -114,7 +122,7 @@
     <a id="contacts"></a>
     <footer class="contacts">
         <h2 class="contacts__title">Contacts</h2>
-        <p class="contacts__text">Want to know more or just chat?
+        <p class="contacts__text">Want to know more or just chat? <br>
             You are welcome!</p>
         <button class="contacts__send">Send message</button>
         <ul class="contacts__social-networks">
