@@ -71,7 +71,7 @@ $black: #070707;
     background: url("../images/menu-icon.svg") no-repeat center/contain;
 
     &-close {
-      display: none;
+      // display: none;
       width: 23px;
       height: 23px;
       background: url("../images/menu-icon-close.svg") no-repeat center/contain;
@@ -139,6 +139,10 @@ $black: #070707;
       color: $black;
     }
   }
+}
+
+.hidden {
+  display: none;
 }
 
 .banner {
