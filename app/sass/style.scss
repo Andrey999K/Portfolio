@@ -517,6 +517,7 @@ a:hover {
 
     &__lang {
       display: flex;
+      visibility: hidden;
     }
 
     &__menu {
@@ -647,6 +648,9 @@ a:hover {
   color: #000000;
 }
 
+.lang_visibile {
+  visibility: visible;
+}
 
 // ::before {
 //   transition: all .9s ease;

@@ -16,6 +16,7 @@ function menu() {
     // menu_close[0].style.display = "block";
     // menu[0].style.display = "none";
     menu[0].className = "header__menu-close";
+    header_lang[0].classList.add("lang_visibile");
     //header_lang[0].style.display = "flex";
     i++;
   } else {
@@ -26,21 +27,37 @@ function menu() {
     // // menu_close[0].style.display = "none";
     // // menu[0].style.display = "block";
     menu_close[0].className = "header__menu";
+    header_lang[0].classList.remove("lang_visibile");
     // header_lang[0].style.display = "none";
     i--;
   }
 }
 let lang_banner = "en";
+document.getElementsByClassName("banner__lang-en")[0].classList.add("selected");
+document.getElementsByClassName("header__lang-en")[0].classList.add("selected");
 
 function lang1(element) {
-  let lang_en = document.getElementsByClassName("banner__lang-en");
-  let lang_ru = document.getElementsByClassName("banner__lang-ru");
-  if (element == "banner__lang-en") {
-    lang_en[0].classList.add("selected");
-    lang_ru[0].classList.remove("selected");
-  } else {
-    lang_ru[0].classList.add("selected");
-    lang_en[0].classList.remove("selected");
+  let banner_lang_en = document.getElementsByClassName("banner__lang-en");
+  let banner_lang_ru = document.getElementsByClassName("banner__lang-ru");
+  let header_lang_en = document.getElementsByClassName("header__lang-en");
+  let header_lang_ru = document.getElementsByClassName("header__lang-ru");
+  switch (element) {
+    case "banner__lang-en":
+      banner_lang_en[0].classList.add("selected");
+      banner_lang_ru[0].classList.remove("selected");
+      break;
+    case "banner__lang-ru":
+      banner_lang_ru[0].classList.add("selected");
+      banner_lang_en[0].classList.remove("selected");
+      break;
+    case "header__lang-en":
+      header_lang_en[0].classList.add("selected");
+      header_lang_ru[0].classList.remove("selected");
+      break;
+    case "header__lang-ru":
+      header_lang_ru[0].classList.add("selected");
+      header_lang_en[0].classList.remove("selected");
+      break;
   }
 }
 
