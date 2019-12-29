@@ -154,7 +154,8 @@ $black: #070707;
     max-width: 944px;
     margin: 0 auto 104px;
     padding-bottom: 436px;
-    background: url("../images/banner-background-1440-2x.jpg") no-repeat center bottom 0;
+    background: url("../images/banner-background-1440-2x.jpg") no-repeat center
+      bottom 0;
     background-size: 943px 387px;
   }
 
@@ -270,7 +271,8 @@ $black: #070707;
   }
 
   &__adobe-illustrator {
-    background: url("../images/adobe-illustrator-logo.svg") no-repeat center top 0;
+    background: url("../images/adobe-illustrator-logo.svg") no-repeat center top
+      0;
 
     .skill__rating {
       height: 26px;
@@ -279,7 +281,8 @@ $black: #070707;
   }
 
   &__adobe-after-effects {
-    background: url("../images/adobe-after-effects-logo.svg") no-repeat center top 0;
+    background: url("../images/adobe-after-effects-logo.svg") no-repeat center
+      top 0;
 
     .skill__rating {
       height: 26px;
@@ -377,6 +380,7 @@ $black: #070707;
     font-size: 18px;
     line-height: 22px;
     text-decoration: underline;
+    z-index: 1;
   }
 }
 
@@ -477,7 +481,6 @@ a:hover {
 
 @media (max-width: 1100px) {
   .portfolio {
-
     &__piedpiper,
     &__simple-project,
     &__wild-acation {
@@ -514,7 +517,7 @@ a:hover {
 @media (max-width: 768px) {
   .header {
     position: fixed;
-    //@debug: 19px;
+    // height: 66px+57px+19px;
 
     height: 100vh;
     padding: 66px 0 57px;
@@ -632,7 +635,8 @@ a:hover {
     &__content {
       // padding-bottom: 478px+38px;
       padding-bottom: 162%;
-      background: url("../images/banner-background-375-2x.jpg") no-repeat center bottom 0;
+      background: url("../images/banner-background-375-2x.jpg") no-repeat center
+        bottom 0;
       background-size: contain;
     }
   }
@@ -666,6 +670,7 @@ a:hover {
 }
 
 .header_white {
+  // height: 100vh;
   background: #ffffff;
   transition: 1s;
 }
