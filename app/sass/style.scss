@@ -1,10 +1,10 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0;
-  box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+  border: 0;
   outline: none;
 }
 
@@ -19,31 +19,31 @@ button {
 }
 
 @font-face {
+  font-weight: normal;
   font-family: "Gilroy Medium";
+  font-style: normal;
   src: url("Gilroy-Medium.eot");
   src: url("Gilroy-Medium.eot?#iefix") format("embedded-opentype"),
     url("Gilroy-Medium.woff") format("woff"),
     url("Gilroy-Medium.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
+  font-weight: normal;
   font-family: "Gilroy Bold";
+  font-style: normal;
   src: url("Gilroy-Bold.eot");
   src: url("Gilroy-Bold.eot?#iefix") format("embedded-opentype"),
     url("Gilroy-Bold.woff") format("woff"),
     url("Gilroy-Bold.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
 }
 
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Gilroy Medium", sans-serif;
   color: #070707;
+  font-family: "Gilroy Medium", sans-serif;
 }
 
 .main {
@@ -60,12 +60,13 @@ $black: #070707;
 .header {
   position: sticky;
   top: 0;
-  background: #ffffff;
-  width: 100%;
   z-index: 1;
+  width: 100%;
+  background: #ffffff;
 
   &__menu {
     display: none;
+
     width: 33px;
     height: 19px;
     background: url("../images/menu-icon.svg") no-repeat center/contain;
@@ -79,38 +80,38 @@ $black: #070707;
   }
 
   &__lang {
-    display: none;
     position: absolute;
-    align-items: center;
-    bottom: 57px;
     right: -30px;
+    bottom: 57px;
+    display: none;
+    align-items: center;
     justify-content: space-between;
     width: 144px;
     height: 34px;
-    transform: rotate(90deg);
+    color: $gray;
+    font-weight: bold;
     font-size: 34px;
     line-height: 34px;
-    font-weight: bold;
-    color: $gray;
+    transform: rotate(90deg);
 
-    &-ru,
-    &-en {
-      line-height: 16px;
-      color: $gray;
-
-      // &:focus {
-      //   color: $black;
-      // }
-    }
-
-    &:before {
-      content: "";
+    &::before {
       position: absolute;
       top: 2px;
       left: 55px;
       width: 4px;
       height: 30px;
       background: $black;
+      content: "";
+    }
+
+    &-ru,
+    &-en {
+      color: $gray;
+      line-height: 16px;
+
+      // &:focus {
+      //   color: $black;
+      // }
     }
   }
 }
@@ -123,21 +124,21 @@ $black: #070707;
   &__list {
     display: flex;
     justify-content: space-between;
-    font-size: 18px;
-    font-weight: bold;
     width: 100%;
     max-width: 997px;
     margin: 0 auto;
     padding: 33px 26px 32px;
+    font-weight: bold;
+    font-size: 18px;
     border-bottom: 1px solid #828282;
   }
 
   &__link {
     color: $gray;
+  }
 
-    // &:focus {
-    //   color: $black;
-    // }
+  a.active {
+    color: #000000;
   }
 }
 
@@ -147,8 +148,8 @@ $black: #070707;
 
   &__content {
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
+    justify-content: space-between;
     width: 100%;
     max-width: 944px;
     margin: 0 auto 104px;
@@ -173,30 +174,30 @@ $black: #070707;
     justify-content: space-between;
     width: 68px;
     height: 14px;
-    transform: rotate(-90deg);
+    color: $gray;
+    font-weight: bold;
     font-size: 16px;
     line-height: 16px;
-    font-weight: bold;
-    color: $gray;
+    transform: rotate(-90deg);
 
-    &-ru,
-    &-en {
-      line-height: 16px;
-      color: $gray;
-
-      // &:focus {
-      //   color: $black;
-      // }
-    }
-
-    &:before {
-      content: "";
+    &::before {
       position: absolute;
       top: 2px;
       left: 27px;
       width: 2px;
       height: 15px;
       background: $black;
+      content: "";
+    }
+
+    &-ru,
+    &-en {
+      color: $gray;
+      line-height: 16px;
+
+      // &:focus {
+      //   color: $black;
+      // }
     }
   }
 }
@@ -206,26 +207,26 @@ $black: #070707;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  color: $black;
   width: 100%;
-  padding: 120px 29px 107px-30px;
+  padding: 120px 29px 77px;
+  color: $black;
   // height: 506px;
   background: #f6f6f6;
 
   &__title {
+    margin-bottom: 30px;
+    font-weight: bold;
     font-size: 34px;
     line-height: 34px;
-    font-weight: bold;
-    margin-bottom: 30px;
   }
 
   &__text {
-    text-align: center;
-    height: 218px;
-    font-size: 18px;
     max-width: 425px;
+    //height: 218px;
     height: 50px;
     margin-bottom: 30px;
+    font-size: 18px;
+    text-align: center;
 
     &:nth-child(4) {
       max-width: 340px;
@@ -236,27 +237,27 @@ $black: #070707;
 .skills {
   display: flex;
   flex-direction: column;
-  align-items: center;
   align-content: space-between;
-  padding: 91px 74px 111px;
+  align-items: center;
   width: 100%;
   max-width: 936px+74px * 2;
+  padding: 91px 74px 111px;
 
   &__title {
-    font-size: 34px;
     margin-bottom: 69px;
+    font-size: 34px;
   }
 
   &__text {
-    font-size: 18px;
     margin-bottom: 83px;
+    font-size: 18px;
   }
 
   &__description {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
   }
 
   &__adobe-photoshop {
@@ -299,17 +300,17 @@ $black: #070707;
 .skill {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   width: 166px;
   height: 206px;
   padding-top: 113px;
 
   &__name {
-    text-align: center;
+    width: 80px;
     font-size: 14px;
     line-height: 17px;
-    width: 80px;
+    text-align: center;
   }
 
   &__rating {
@@ -329,13 +330,13 @@ $black: #070707;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 112px 29px 0;
   width: 100%;
+  padding: 112px 29px 0;
   background: #f6f6f6;
 
   &__title {
+    // margin-bottom: 60px;
     font-size: 34px;
-    margin-bottom: 60px;
   }
 
   &__list {
@@ -352,40 +353,29 @@ $black: #070707;
     margin-bottom: 45px;
   }
 
-  &__fashion {
-    max-width: 936px;
+  &__piedpiper,
+  &__simple-project,
+  &__wild-acation {
     width: 100%;
-    max-height: 510px;
-    transition: 1s;
-    cursor: pointer;
-
-    &:hover {
-      max-width: 1050px;
-      max-height: 572px;
-      transition: 1s;
-    }
-  }
-
-  &__reebok,
-  &__braun {
     max-width: 936px;
-    width: 100%;
     max-height: 522px;
-    transition: 1s;
+    margin: 42px 0;
     cursor: pointer;
+    transition: 1s;
 
     &:hover {
       max-width: 1050px;
       max-height: 586px;
+      margin: 10px 0;
       transition: 1s;
     }
   }
 
   &__link {
+    // margin-bottom: 99px;
+    color: $black;
     font-size: 18px;
     line-height: 22px;
-    margin-bottom: 99px;
-    color: $black;
     text-decoration: underline;
   }
 }
@@ -400,29 +390,29 @@ $black: #070707;
   padding: 114px 30px 123px;
 
   &__title {
-    font-size: 34px;
     margin-bottom: 35px;
+    font-size: 34px;
   }
 
   &__text {
-    text-align: center;
-    font-size: 18px;
     margin-bottom: 30px;
+    font-size: 18px;
+    text-align: center;
   }
 
   &__send {
     width: 180px;
     height: 42px;
-    border-radius: 21px;
-    font-size: 18px;
-    color: #ffffff;
-    background: #070707;
-    transition: 1s;
     margin-bottom: 86px;
+    color: #ffffff;
+    font-size: 18px;
+    background: #070707;
+    border-radius: 21px;
+    transition: 1s;
 
     &:hover {
-      background: #312e2e;
       text-shadow: 0 0 5px #ffffff;
+      background: #312e2e;
       box-shadow: 0 0 20px 10px #312e2e;
       transition: 1s;
     }
@@ -431,8 +421,8 @@ $black: #070707;
   &__social-networks {
     display: flex;
     justify-content: space-between;
-    max-width: 342px;
     width: 100%;
+    max-width: 342px;
     margin-bottom: 45px;
   }
 
@@ -465,9 +455,9 @@ $black: #070707;
   }
 
   &-bottom {
-    text-align: center;
-    font-size: 14px;
     color: $gray;
+    font-size: 14px;
+    text-align: center;
 
     &__list {
       display: flex;
@@ -499,8 +489,8 @@ a:hover {
     }
 
     &__description {
-      height: 206px * 2+81px;
       align-content: space-between;
+      height: 206px * 2+81px;
     }
   }
 }
@@ -508,18 +498,18 @@ a:hover {
 @media (max-width: 768px) {
   .header {
     position: fixed;
-    padding: 66px 0 57px;
-    background: none;
-    height: 19px;
+    //@debug: 19px;
 
     height: 100vh;
+    padding: 66px 0 57px;
+    background: none;
     opacity: 0.95;
     transition: 1s;
 
     &__lang {
+      bottom: -150px;
       display: flex;
       visibility: hidden;
-      bottom: -150px;
       transition: 1s;
     }
 
@@ -531,23 +521,23 @@ a:hover {
   .nav {
     position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
+    justify-content: space-between;
     padding: 0 30px;
 
     &__list {
-
-      margin: 0;
       position: relative;
       left: -220px;
-      //display: none;
-      visibility: hidden;
       // max-width: 300px;
       flex-direction: column;
-      font-size: 34px;
-      padding: 0 26px;
       height: 50vh;
+
+      margin: 0;
+      padding: 0 26px;
+      font-size: 34px;
       border: none;
+      //display: none;
+      visibility: hidden;
       transition: 1s;
     }
   }
@@ -558,9 +548,9 @@ a:hover {
 
   .banner {
     &__lang {
-      transform: initial;
       bottom: 0;
       left: 0;
+      transform: initial;
     }
   }
 
@@ -582,8 +572,8 @@ a:hover {
     &__content {
       flex-direction: column;
       align-items: flex-start;
-      padding-bottom: 387px+25px;
       margin: 0 auto 83px;
+      padding-bottom: 387px+25px;
     }
 
     &__name {
@@ -599,8 +589,8 @@ a:hover {
     max-width: 288px+74px * 2;
 
     &__description {
-      height: 1068px;
       justify-content: center;
+      height: 1068px;
     }
   }
 
@@ -641,10 +631,10 @@ a:hover {
 }
 
 .visibile {
-  display: flex;
-  visibility: visible;
   left: 0;
+  display: flex;
   padding: 0;
+  visibility: visible;
   // max-width: 300px;
   transition: 1s;
 }
@@ -654,8 +644,8 @@ a:hover {
 }
 
 .lang_visibile {
-  visibility: visible;
   bottom: 60px;
+  visibility: visible;
   transition: 1s;
 }
 

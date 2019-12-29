@@ -14,14 +14,14 @@
     <header class="header">
         <nav class="nav" id="menu">
             <ul class="nav__list">
-                <li class="nav__list-item"><a class="nav__link" href="#home" onclick="menu_item(0)">Home</a></li>
-                <li class="nav__list-item"><a class="nav__link" href="#about-me" onclick="menu_item(1)">About
+                <li class="nav__list-item"><a class="nav__link" href="#home">Home</a></li>
+                <li class="nav__list-item"><a class="nav__link" href="#about-me">About
                         me</a></li>
-                <li class="nav__list-item"><a class="nav__link" href="#skills" onclick="menu_item(2)">Skills</a>
+                <li class="nav__list-item"><a class="nav__link" href="#skills">Skills</a>
                 </li>
-                <li class="nav__list-item"><a class="nav__link" href="#portfolio" onclick="menu_item(3)">Portfolio</a>
+                <li class="nav__list-item"><a class="nav__link" href="#portfolio">Portfolio</a>
                 </li>
-                <li class="nav__list-item"><a class="nav__link" href="#contacts" onclick="menu_item(4)">Contacts</a>
+                <li class="nav__list-item"><a class="nav__link" href="#contacts">Contacts</a>
                 </li>
             </ul>
             <button class="header__menu" onclick="menu()"></button>
@@ -38,10 +38,10 @@
         <a id="home"></a>
         <section class="banner">
             <div class="banner__content">
-                <h2 class="banner__name">Denis <br>
-                    Novik</h2>
+                <h2 class="banner__name">Andrey <br>
+                    Kutuzov</h2>
                 <p class="banner__description">UX | UI designer <br>
-                    24 years old, Minsk</p>
+                    22 years old, Pavlovsky Posad</p>
                 <div class="banner__lang">
                     <a class="banner__lang-ru" href="#" onclick="lang1('banner__lang-ru')">RU</a>
                     <a class="banner__lang-en selected" href="#" onclick="lang1('banner__lang-en')">ENG</a>
@@ -99,23 +99,23 @@
             <ul class="portfolio__list">
                 <li class="portfolio__list-item">
                     <article class="portfolio-proect">
-                        <img class="portfolio-layout portfolio__fashion" src="./images/portfolio-fashion-1440-2x.jpg"
+                        <img class="portfolio-layout portfolio__piedpiper" src="./images/portfolio-piedpiper-1440.jpg"
                             alt=""></img>
-                        <a class="portfolio__link" href="#">Online fashion store - Homepage</a>
+                        <a class="portfolio__link" href="https://andrey999k.github.io/site1/">Piedpiper</a>
                     </article>
                 </li>
                 <li class="portfolio__list-item">
                     <article class="portfolio-proect">
-                        <img class="portfolio-layout portfolio__reebok" src="./images/portfolio-reebok-1440-2x.jpg"
-                            alt=""></img>
-                        <a class="portfolio__link" href="#">Reebok Store - Concept</p>
+                        <img class="portfolio-layout portfolio__simple-project"
+                            src="./images/portfolio-simple-project-1440.jpg" alt=""></img>
+                        <a class="portfolio__link" href="https://andrey999k.github.io/Level1-Site2/">Simple project</p>
                     </article>
                 </li>
                 <li class="portfolio__list-item">
                     <article class="portfolio-proect">
-                        <img class="portfolio-layout portfolio__braun" src="./images/portfolio-braun-1440-2x.jpg"
-                            alt=""><img />
-                        <a class="portfolio__link" href="#">Braun Landing Page - Concept</a>
+                        <img class="portfolio-layout portfolio__wild-acation"
+                            src="./images/portfolio-wild-acation-1440.jpg" alt=""><img />
+                        <a class="portfolio__link" href="#">Wild acation</a>
                     </article>
                 </li>
             </ul>
@@ -149,7 +149,14 @@
     <script src="scripts/libs.min.js"></script>
     <script src="scripts/main.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script type="text/javascript">
+    <!-- <script src="scripts/libs/vanillajs-scrollspy.min.js"></script>
+    <script>
+        const navbar = document.querySelector('#menu');
+        const scrollspy = new VanillaScrollspy(navbar);
+        scrollspy.init();
+    </script> -->
+    <!-- <script src="scripts/libs/vanillajs-scrollspy.js"></script> -->
+    <!-- <script type="text/javascript">
         $(document).ready(function () {
             $("#menu").on("click", "a", function (event) {
                 event.preventDefault();
@@ -160,7 +167,7 @@
                 }, 900);
             });
         });
-    </script>
+    </script> -->
 </body>
 
 </html>

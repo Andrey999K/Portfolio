@@ -8,8 +8,8 @@
     "url": "https//github.com/Ereburg/templateHTML5-light"
   },
   "scripts": {
-    "style:lint": "stylelint 'app/sass/**/*.scss' --syntax scss",
-    "style:fix": "stylelint 'app/sass/**/*.scss' --syntax scss --fix",
+    "style:lint": "stylelint \"app/sass/**/*.scss\" --syntax scss",
+    "style:fix": "stylelint \"app/sass/**/*.scss\" --syntax scss --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -54,5 +54,8 @@
   "browserslist": [
     "last 4 version",
     "> 2%"
-  ]
+  ],
+  "dependencies": {
+    "scrollspy-js": "^0.1.3"
+  }
 }

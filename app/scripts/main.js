@@ -1,5 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {});
+document.addEventListener("DOMContentLoaded", () => {
+  const menu_ = document.querySelector('.nav__list');
+  const scrollspy = new VanillaScrollspy(menu_);
+  scrollspy.init();
+});
 let i = 0;
+
+
 
 function menu() {
   let header = document.getElementsByClassName("header");
@@ -52,26 +58,26 @@ function lang1(element) {
   }
 }
 
-function menu_item(element) {
-  let menu_item = document.getElementsByClassName("nav__link");
-  for (let i = 0; i < menu_item.length; i++) {
-    menu_item[i].classList.remove("selected");
-  }
-  switch (element) {
-    case 0:
-      menu_item[0].classList.add("selected");
-      break;
-    case 1:
-      menu_item[1].classList.add("selected");
-      break;
-    case 2:
-      menu_item[2].classList.add("selected");
-      break;
-    case 3:
-      menu_item[3].classList.add("selected");
-      break;
-    case 4:
-      menu_item[4].classList.add("selected");
-      break;
-  }
-}
+// function menu_item(element) {
+//   let menu_item = document.getElementsByClassName("nav__link");
+//   for (let i = 0; i < menu_item.length; i++) {
+//     menu_item[i].classList.remove("selected");
+//   }
+//   switch (element) {
+//     case 0:
+//       menu_item[0].classList.add("selected");
+//       break;
+//     case 1:
+//       menu_item[1].classList.add("selected");
+//       break;
+//     case 2:
+//       menu_item[2].classList.add("selected");
+//       break;
+//     case 3:
+//       menu_item[3].classList.add("selected");
+//       break;
+//     case 4:
+//       menu_item[4].classList.add("selected");
+//       break;
+//   }
+// }
