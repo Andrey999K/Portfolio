@@ -16,14 +16,14 @@ function menu() {
   if (i == 0) {
     nav[0].classList.add("visibile");
     //header[0].style.background = "#ffffff";
-    header[0].classList.add("header_white");
+    header[0].classList.add("header_white", "header_height");
     menu[0].className = "header__menu-close";
     header_lang[0].classList.add("lang_visibile");
     i++;
   } else {
     nav[0].classList.remove("visibile");
     //header[0].style.background = "none";
-    header[0].classList.remove("header_white");
+    header[0].classList.remove("header_white", "header_height");
     menu_close[0].className = "header__menu";
     header_lang[0].classList.remove("lang_visibile");
     i--;
