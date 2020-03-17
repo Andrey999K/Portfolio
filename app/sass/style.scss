@@ -154,8 +154,7 @@ $black: #070707;
     max-width: 944px;
     margin: 0 auto 104px;
     padding-bottom: 436px;
-    background: url("../images/banner-background-1440-2x.jpg") no-repeat center
-      bottom 0;
+    background: url("../images/banner-background-1440-2x.jpg") no-repeat center bottom 0;
     background-size: 943px 387px;
   }
 
@@ -261,8 +260,8 @@ $black: #070707;
     width: 100%;
   }
 
-  &__adobe-photoshop {
-    background: url("../images/adobe-photoshop-logo.svg") no-repeat center top 0;
+  &__html {
+    background: url("../images/html-logo.svg") no-repeat center top 0;
 
     .skill__rating {
       height: 26px;
@@ -270,23 +269,21 @@ $black: #070707;
     }
   }
 
-  &__adobe-illustrator {
-    background: url("../images/adobe-illustrator-logo.svg") no-repeat center top
-      0;
+  &__css {
+    background: url("../images/css-logo.svg") no-repeat center top 0;
+
+    .skill__rating {
+      height: 26px;
+      background: url("../images/rating-4.svg") no-repeat center;
+    }
+  }
+
+  &__js {
+    background: url("../images/js-logo.svg") no-repeat center top 0;
 
     .skill__rating {
       height: 26px;
       background: url("../images/rating-3.svg") no-repeat center;
-    }
-  }
-
-  &__adobe-after-effects {
-    background: url("../images/adobe-after-effects-logo.svg") no-repeat center
-      top 0;
-
-    .skill__rating {
-      height: 26px;
-      background: url("../images/rating-4.svg") no-repeat center;
     }
   }
 
@@ -426,36 +423,29 @@ $black: #070707;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 342px;
+    max-width: 150px;
     margin-bottom: 45px;
   }
 
-  &__linkedln-link {
+  &__vk-link {
     display: block;
     width: 40px;
     height: 40px;
-    background: url("../images/linkedIn-logo.svg") no-repeat center/contain;
+    background: url("../images/vk-icon.svg") no-repeat center/contain;
   }
 
   &__instagram-link {
     display: block;
     width: 40px;
     height: 40px;
-    background: url("../images/instagram-logo.svg") no-repeat center/contain;
+    background: url("../images/instagram-icon.svg") no-repeat center/contain;
   }
 
-  &__behance-link {
+  &__youtube-link {
     display: block;
     width: 40px;
     height: 40px;
-    background: url("../images/behance-logo.svg") no-repeat center/contain;
-  }
-
-  &__dribble-link {
-    display: block;
-    width: 40px;
-    height: 40px;
-    background: url("../images/dribbble-logo.svg") no-repeat center/contain;
+    background: url("../images/youtube-icon.svg") no-repeat center/contain;
   }
 
   &-bottom {
@@ -481,6 +471,7 @@ a:hover {
 
 @media (max-width: 1100px) {
   .portfolio {
+
     &__piedpiper,
     &__simple-project,
     &__wild-acation {
@@ -523,14 +514,14 @@ a:hover {
     padding: 66px 0 57px;
     background: none;
     opacity: 0.95;
-    transition: all 1s, height 0s 1s;
+    transition: all 1.5s, height 0s 1.5s;
     height: 66px+57px+19px;
 
     &__lang {
       bottom: -150px;
       display: flex;
       visibility: hidden;
-      transition: 1s;
+      transition: 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     }
 
     &__menu {
@@ -558,7 +549,7 @@ a:hover {
       border: none;
       //display: none;
       visibility: hidden;
-      transition: 1s;
+      transition: 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     }
   }
 
@@ -636,8 +627,7 @@ a:hover {
     &__content {
       // padding-bottom: 478px+38px;
       padding-bottom: 162%;
-      background: url("../images/banner-background-375-2x.jpg") no-repeat center
-        bottom 0;
+      background: url("../images/banner-background-375-2x.jpg") no-repeat center bottom 0;
       background-size: contain;
     }
   }
@@ -657,7 +647,7 @@ a:hover {
   padding: 0;
   visibility: visible;
   // max-width: 300px;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .selected {
@@ -667,7 +657,7 @@ a:hover {
 .lang_visibile {
   bottom: 60px;
   visibility: visible;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .header_white {
