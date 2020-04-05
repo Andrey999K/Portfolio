@@ -154,8 +154,7 @@ $black: #070707;
     max-width: 944px;
     margin: 0 auto 104px;
     padding-bottom: 436px;
-    background: url("../images/banner-background-1440-2x.jpg") no-repeat center
-      bottom 0;
+    background: url("../images/banner-background-1440-2x.jpg") no-repeat center bottom 0;
     background-size: 943px 387px;
   }
 
@@ -472,6 +471,7 @@ a:hover {
 
 @media (max-width: 1100px) {
   .portfolio {
+
     &__piedpiper,
     &__simple-project,
     &__wild-acation {
@@ -627,8 +627,7 @@ a:hover {
     &__content {
       // padding-bottom: 478px+38px;
       padding-bottom: 162%;
-      background: url("../images/banner-background-375-2x.jpg") no-repeat center
-        bottom 0;
+      background: url("../images/banner-background-375-2x.jpg") no-repeat center bottom 0;
       background-size: contain;
     }
   }
