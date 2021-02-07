@@ -117,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         image,
         alt
     }) {
+        console.log(name);
         const project = document.createElement("li");
         project.className = "portfolio__list-item";
         project.insertAdjacentHTML(
@@ -134,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
         listProject.insertAdjacentElement("beforeend", project);
     }
 
-    getData("../data/data.json").then(function (data) {
+    getData("data/data.json").then(function (data) {
         data.forEach(addProject)
     });
 
