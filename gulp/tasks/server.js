@@ -9,7 +9,10 @@ module.exports = function () {
         });
         $.gulp.watch('./app/**/*.html', $.gulp.parallel('html')); // отслеживаем изменения, pug конвертирует, затем минифицируем и перебрасываем в dist
         $.gulp.watch('./app/sass/**/*.scss', $.gulp.parallel('styles')); // стилевые изменения не релоадим, а стримим
-        $.gulp.watch('./app/scripts/**/*.js', $.gulp.parallel('scripts'));
+        $.gulp.watch([
+            './app/scripts/**/*.js',
+            './app/data/*.json'
+        ], $.gulp.parallel('scripts'));
         $.gulp.watch([
             './build/**/*.html',
             './build/scripts/**/*.js'
