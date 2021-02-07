@@ -37,31 +37,31 @@
     {
         "name": "Netclicks",
         "link": "https://kutuzova.000webhostapp.com/Glo%20Academy%20wordpress/",
-        "image": "./images/delivery-food-1440.webp",
+        "image": "./images/Netclicks-1440.webp",
         "alt": "netclicks"
     },
     {
         "name": "newchurchill.ru",
         "link": "https://andrey999k.github.io/https-newchurchill.ru-/",
-        "image": "./images/delivery-food-1440.webp",
+        "image": "./images/newchurchill.ru-1440.webp",
         "alt": "newchurchill"
     },
     {
         "name": "test-task",
         "link": "https://andrey999k.github.io/test_task/",
-        "image": "./images/delivery-food-1440.webp",
+        "image": "./images/test-task-1440.webp",
         "alt": "easy garden"
     },
     {
         "name": "YOGA",
         "link": "https://andrey999k.github.io/Level3-Site1/build/",
-        "image": "./images/delivery-food-1440.webp",
+        "image": "./images/YOGA-1440.webp",
         "alt": "yoga"
     },
     {
         "name": "news-page",
         "link": "https://andrey999k.github.io/Level2-news-page/build/",
-        "image": "./images/delivery-food-1440.webp",
+        "image": "./images/news-page-1440.webp",
         "alt": "news page"
     }
 ]

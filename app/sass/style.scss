@@ -257,6 +257,11 @@ $black: #070707;
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
+
+        li:hover {
+            transition: 0.5s;
+            transform: scale(1.1);
+        }
     }
 
     &__html {
@@ -305,6 +310,7 @@ $black: #070707;
     width: 166px;
     height: 206px;
     padding-top: 113px;
+    transition: 0.5s;
 
     &__name {
         width: 80px;
@@ -371,6 +377,12 @@ $black: #070707;
         font-size: 18px;
         line-height: 22px;
         text-decoration: underline;
+        transition: 0.5s;
+
+        &:hover {
+            color: gray;
+            transform: rotate(385deg) scale(1.5);
+        }
         // z-index: 2;
     }
 }
@@ -398,7 +410,7 @@ $black: #070707;
         width: 180px;
         height: 42px;
         margin-top: 30px;
-        margin-bottom: 86px;
+        margin-bottom: 30px;
         color: #ffffff;
         font-size: 18px;
         background: #070707;
@@ -406,12 +418,7 @@ $black: #070707;
         transition: 0.5s;
 
         &:hover {
-            margin-top: 25px;
-            margin-bottom: 81px;
-            width: 190px;
-            height: 52px;
-            border-radius: 27px;
-            font-size: 19px;
+            transform: scale(1.5);
         }
     }
 
@@ -419,7 +426,7 @@ $black: #070707;
         display: flex;
         justify-content: space-between;
         width: 100%;
-        max-width: 150px;
+        max-width: 178px;
         margin-bottom: 45px;
     }
 
@@ -442,6 +449,13 @@ $black: #070707;
         width: 40px;
         height: 40px;
         background: url("../images/youtube-icon.svg") no-repeat center/contain;
+    }
+
+    &__telegram-link {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: url("../images/telegram-icon.svg") no-repeat center/contain;
     }
 
     &-bottom {
