@@ -107,10 +107,9 @@ $black: #070707;
         &-en {
             color: $gray;
             line-height: 16px;
-
-            // &:focus {
-            //   color: $black;
-            // }
+            font-weight: bold;
+            font-size: 34px;
+            background: #fff;
         }
     }
 }
@@ -193,10 +192,9 @@ $black: #070707;
         &-en {
             color: $gray;
             line-height: 16px;
-
-            // &:focus {
-            //   color: $black;
-            // }
+            font-weight: bold;
+            font-size: 16px;
+            background: #fff;
         }
     }
 }
@@ -383,6 +381,7 @@ $black: #070707;
             color: gray;
             transform: rotate(385deg) scale(1.5);
         }
+
         // z-index: 2;
     }
 }

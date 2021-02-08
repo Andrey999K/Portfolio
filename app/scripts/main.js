@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let nav = document.querySelector(".nav__list");
     let header_lang = document.querySelector(".header__lang");
     const listProject = document.querySelector(".portfolio__list");
-
+    const bannerButton = document.querySelectorAll(".banner__lang button");
 
     menu.addEventListener("click", item => {
 
@@ -46,35 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
-    let lang_banner = "en";
-    document.getElementsByClassName("banner__lang-en")[0].classList.add("selected");
-    document.getElementsByClassName("header__lang-en")[0].classList.add("selected");
-
-    function lang1(element) {
-        let banner_lang_en = document.getElementsByClassName("banner__lang-en");
-        let banner_lang_ru = document.getElementsByClassName("banner__lang-ru");
-        let header_lang_en = document.getElementsByClassName("header__lang-en");
-        let header_lang_ru = document.getElementsByClassName("header__lang-ru");
-        switch (element) {
-            case "banner__lang-en":
-                banner_lang_en[0].classList.add("selected");
-                banner_lang_ru[0].classList.remove("selected");
-                break;
-            case "banner__lang-ru":
-                banner_lang_ru[0].classList.add("selected");
-                banner_lang_en[0].classList.remove("selected");
-                break;
-            case "header__lang-en":
-                header_lang_en[0].classList.add("selected");
-                header_lang_ru[0].classList.remove("selected");
-                break;
-            case "header__lang-ru":
-                header_lang_ru[0].classList.add("selected");
-                header_lang_en[0].classList.remove("selected");
-                break;
-        }
-    }
 
     // function menu_item(element) {
     //   let menu_item = document.getElementsByClassName("nav__link");
@@ -117,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
         image,
         alt
     }) {
-        console.log(name);
         const project = document.createElement("li");
         project.className = "portfolio__list-item";
         project.insertAdjacentHTML(
@@ -137,6 +107,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     getData("data/data.json").then(function (data) {
         data.forEach(addProject)
+    });
+
+    bannerButton[0].addEventListener("click", item => {
+        console.log("Выбран русский язык");
+        bannerButton[1].classList.remove("selected")
+        bannerButton[0].classList.add("selected")
+        // document.title = 
+    });
+
+    bannerButton[1].addEventListener("click", () => {
+        console.log("Выбран английский язык");
+        bannerButton[0].classList.remove("selected")
+        bannerButton[1].classList.add("selected")
+        // document.title = 
     });
 
 });

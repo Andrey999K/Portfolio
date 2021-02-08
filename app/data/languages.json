@@ -1,0 +1,13 @@
+[{
+        "title": "Portfolio",
+        "nav": [
+            "Home", "About me", "Skills", "Portfolio", "Contacts"
+        ]
+    },
+    {
+        "title": "Портфолио",
+        "nav": [
+            "Главная", "Обо мне", "Навыки", "Портфолио", "Контакты"
+        ]
+    }
+]
