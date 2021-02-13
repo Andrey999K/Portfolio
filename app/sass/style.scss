@@ -126,7 +126,7 @@ $black: #070707;
         max-width: 997px;
         margin: 0 auto;
         padding: 33px 26px 32px;
-        font-weight: bold;
+        // font-weight: bold;
         font-size: 18px;
         border-bottom: 1px solid #828282;
     }
@@ -157,7 +157,7 @@ $black: #070707;
     }
 
     &__name {
-        font-size: 47.3392px;
+        font-size: 47px;
     }
 
     &__description {
@@ -255,11 +255,6 @@ $black: #070707;
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
-
-        li:hover {
-            transition: 0.5s;
-            transform: scale(1.1);
-        }
     }
 
     &__html {
@@ -360,13 +355,6 @@ $black: #070707;
         margin: 42px 0;
         cursor: pointer;
         transition: 0.5s;
-
-        &:hover {
-            max-width: 1050px;
-            max-height: 586px;
-            margin: 10px 0;
-            transition: 0.5s;
-        }
     }
 
     &__link {
@@ -378,8 +366,7 @@ $black: #070707;
         transition: 0.5s;
 
         &:hover {
-            color: gray;
-            transform: rotate(385deg) scale(1.5);
+            transform: scale(1.2);
         }
 
         // z-index: 2;
@@ -406,7 +393,8 @@ $black: #070707;
     }
 
     &__send {
-        width: 180px;
+        max-width: 222px;
+        padding: 0 15px;
         height: 42px;
         margin-top: 30px;
         margin-bottom: 30px;
@@ -417,7 +405,7 @@ $black: #070707;
         transition: 0.5s;
 
         &:hover {
-            transform: scale(1.5);
+            transform: scale(1.2);
         }
     }
 
@@ -427,6 +415,13 @@ $black: #070707;
         width: 100%;
         max-width: 178px;
         margin-bottom: 45px;
+    }
+
+    &__list-item {
+        transition: 0.5s;
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 
     &__vk-link {

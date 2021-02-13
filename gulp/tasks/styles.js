@@ -7,11 +7,11 @@ module.exports = function () {
                 outputStyle: "compressed" // сжимаем выходной стилевой файл
             }))
             .on('error', console.error.bind(console))
-            .pipe($.plugins.purgecss({
-                content: ['./build/**/*.html'],
-                whitelistPatterns: [/visibile/, /selected/, /lang_visibile/, /header_white/, /header_height/]
-                // whitelistPatterns: [/show$/, /mobile$/] // здесь указываешь список селекторов, которые содержат значение
-            })) // а этот плагин удаляет ненужные селекторы, если их нет в html файлах отслеживаемой директории
+            // .pipe($.plugins.purgecss({
+            //     content: ['./build/**/*.html'],
+            //     whitelistPatterns: [/visibile/, /selected/, /lang_visibile/, /header_white/, /header_height/]
+            //     // whitelistPatterns: [/show$/, /mobile$/] // здесь указываешь список селекторов, которые содержат значение
+            // })) // а этот плагин удаляет ненужные селекторы, если их нет в html файлах отслеживаемой директории
             .pipe($.plugins.autoprefixer({
                 cascade: true
             })) // прописываем вендорные префиксы

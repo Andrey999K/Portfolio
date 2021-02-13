@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let header_lang = document.querySelector(".header__lang");
     const listProject = document.querySelector(".portfolio__list");
     const bannerButton = document.querySelectorAll(".banner__lang button");
+    let languageTexts;
+    const navTexts = document.querySelectorAll(".nav__link");
+    const blockTitles = document.querySelectorAll("h2");
+    const paragraphs = document.querySelectorAll("p:not(.skill__name)");
+    const buttonSend = document.querySelector(".contacts__send");
 
     menu.addEventListener("click", item => {
 
@@ -106,21 +111,43 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     getData("data/data.json").then(function (data) {
-        data.forEach(addProject)
+        data.forEach(addProject);
     });
 
-    bannerButton[0].addEventListener("click", item => {
-        console.log("Выбран русский язык");
-        bannerButton[1].classList.remove("selected")
-        bannerButton[0].classList.add("selected")
-        // document.title = 
+    getData("data/languages.json").then(function (data) {
+        languageTexts = data;
+    });
+
+    bannerButton[0].addEventListener("click", () => {
+        bannerButton[1].classList.remove("selected");
+        bannerButton[0].classList.add("selected");
+        document.title = languageTexts[0].title;
+        for (let i = 0; i < navTexts.length; i++) {
+            navTexts[i].innerHTML = languageTexts[1].nav[i];            
+        }
+        for (let i = 0; i < blockTitles.length; i++) {
+            blockTitles[i].innerHTML = languageTexts[1].block_titles[i];            
+        }
+        for (let i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].innerHTML = languageTexts[1].block_text[i];            
+        }
+        buttonSend.innerHTML = languageTexts[1].button_send;
     });
 
     bannerButton[1].addEventListener("click", () => {
-        console.log("Выбран английский язык");
-        bannerButton[0].classList.remove("selected")
-        bannerButton[1].classList.add("selected")
-        // document.title = 
+        bannerButton[0].classList.remove("selected");
+        bannerButton[1].classList.add("selected");
+        document.title = languageTexts[1].title;
+        for (let i = 0; i < navTexts.length; i++) {
+            navTexts[i].innerHTML = languageTexts[0].nav[i];            
+        }
+        for (let i = 0; i < blockTitles.length; i++) {
+            blockTitles[i].innerHTML = languageTexts[0].block_titles[i];            
+        }
+        for (let i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].innerHTML = languageTexts[0].block_text[i];            
+        }
+        buttonSend.innerHTML = languageTexts[0].button_send;
     });
 
 });

@@ -20,8 +20,8 @@ module.exports = function () {
             .pipe($.gulp.dest('./build/scripts'));
     });
     $.gulp.task('json', () => {
-        return $.gulp.src(['./app/data/data.json'])
+        return $.gulp.src(['./app/data/*.json'])
             .pipe($.gulp.dest('./build/data'));
-    })
+    });
     $.gulp.task('scripts', $.gulp.series('scripts-libs', 'scripts-main', 'json'));
 };
