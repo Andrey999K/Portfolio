@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const buttonSend = document.querySelector(".contacts__send");
     const nav__link = document.querySelectorAll(".nav__link");
 
+    // CLOSING THE MENU
     function menuOpenClose() {
         nav.classList.toggle("visibile");
         header.classList.toggle("header_white");
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.toggle("header__menu-close");
     };
 
+    // CLOSING THE MENU
     menu.addEventListener("click", () => {
         menuOpenClose();
     });
@@ -109,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
         listSkill.insertAdjacentElement("beforeend", skill);
     }
 
+    // SWITCH LANGUAGE
     function switchLanguage(item, lang) {
         if (item.classList.contains("selected")) {
             return;
@@ -172,6 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const sss = document.getElementById("");
     console.log(sss);
 
+    // 
     window.addEventListener("scroll", () => {
         nav__link.forEach((item, index) => {
             if (document.querySelector(item.hash).offsetTop - window.pageYOffset <= 200) {
