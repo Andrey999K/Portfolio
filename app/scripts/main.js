@@ -166,4 +166,41 @@ document.addEventListener("DOMContentLoaded", () => {
         switchLanguage(event.target, 0);
     });
 
+    const sections = document.querySelectorAll("section");
+    const footer = document.querySelector("footer");
+    // console.log(sections);
+    const sss = document.getElementById("");
+    console.log(sss);
+
+    window.addEventListener("scroll", () => {
+        nav__link.forEach((item, index) => {
+            if (document.querySelector(item.hash).offsetTop - window.pageYOffset <= 200) {
+                nav__link.forEach(elem => {
+                    elem.classList.remove("selected")
+                });
+                nav__link[index].classList.add("selected");
+            }
+            if (document.querySelector("#contacts").offsetTop - window.pageYOffset <= 350) {
+                nav__link.forEach(elem => {
+                    elem.classList.remove("selected")
+                });
+                nav__link[index].classList.add("selected");
+            }
+        });
+        // console.log(window.pageYOffset);
+        // console.log(sections[2].offsetTop);
+        // sections.forEach((item, index) => {
+        //     if (item.offsetTop - window.pageYOffset <= 200) {
+        //         nav__link.forEach(elem => {
+        //             elem.classList.remove("selected")
+        //         });
+        //         nav__link[index].classList.add("selected");
+        //     }
+        // });
+        // if (window.pageYOffset == sections[2].offsetTop) {
+        //     console.log("ggg");
+        //     nav__link[2].classList.toggle("selected");
+        // }
+    });
+
 });

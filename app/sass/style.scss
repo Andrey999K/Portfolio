@@ -144,6 +144,7 @@ $black: #070707;
 
     &__link {
         color: $gray;
+        transition: 0.3s;
     }
 
     a.active {
@@ -588,10 +589,6 @@ a:hover {
 
 @media (max-width: 460px) {
 
-    .section {
-        // padding: 50px 0;
-    }
-
     .banner {
         padding: 0;
 
@@ -623,6 +620,12 @@ a:hover {
 
 .selected {
     color: #000000;
+
+    &.nav__link {
+        // font-weight: bold;
+        display: block;
+        transform: scale(1.1);
+    }
 }
 
 .lang_visibile {
