@@ -143,6 +143,7 @@ $black: #070707;
     }
 
     &__link {
+        display: block;
         color: $gray;
         transition: 0.3s;
     }
@@ -623,8 +624,7 @@ a:hover {
 
     &.nav__link {
         // font-weight: bold;
-        display: block;
-        transform: scale(1.1);
+        transform: scale(1.1) translate(20px, 0);
     }
 }
 
@@ -650,3 +650,10 @@ a:hover {
 // ::before {
 //   transition: all .9s ease;
 // }
+
+.no-scroll {
+    // height: 100%;
+    // width: 100%;
+    // position: fixed;
+    overflow: hidden;
+}

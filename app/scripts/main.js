@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         header.classList.toggle("header_height");
         header_lang.classList.toggle("lang_visibile");
         menu.classList.toggle("header__menu-close");
+        document.body.classList.toggle("no-scroll");
     };
 
     // CLOSING THE MENU
@@ -99,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
         rating
     }) {
         const skill = document.createElement("li");
-        skill.className = "skill wow bounceInDown"; // flip rubberBand jello
+        skill.className = "skill wow bounceInDown"; // flip rubberBand jello bounceInDown
         skill.setAttribute("data-wow-delay", `${listSkill.childElementCount / 4}s`)
         skill.insertAdjacentHTML("beforeend", `
         <img src="images/${name.toLowerCase()}-logo.svg" alt="${name.toLowerCase()}"
@@ -169,14 +170,20 @@ document.addEventListener("DOMContentLoaded", () => {
         switchLanguage(event.target, 0);
     });
 
-    const sections = document.querySelectorAll("section");
-    const footer = document.querySelector("footer");
-    // console.log(sections);
-    const sss = document.getElementById("");
-    console.log(sss);
-
-    // 
+    // SWITCH OF ELEMENTS IN HEADER WHEN PAGE SCROLL
     window.addEventListener("scroll", () => {
+        // if (nav.classList.contains("visibile")) {
+        //     if (y == 0) {
+        //         y = window.scrollY;
+        //     }
+        //     document.body.classList.add("scrollDisabled");
+        //     document.body.style.marginTop = `${-y}px`;
+        //     return;
+        // } else {
+        //     console.log("ggggg");
+        //     document.body.classList.remove("scrollDisabled");
+        //     document.body.style.marginTop = `0px`;
+        // }
         nav__link.forEach((item, index) => {
             if (document.querySelector(item.hash).offsetTop - window.pageYOffset <= 200) {
                 nav__link.forEach(elem => {
@@ -184,27 +191,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
                 nav__link[index].classList.add("selected");
             }
-            if (document.querySelector("#contacts").offsetTop - window.pageYOffset <= 350) {
+            if (document.querySelector("#contacts").offsetTop - window.pageYOffset <= window.outerHeight / 2) {
                 nav__link.forEach(elem => {
                     elem.classList.remove("selected")
                 });
                 nav__link[index].classList.add("selected");
             }
         });
-        // console.log(window.pageYOffset);
-        // console.log(sections[2].offsetTop);
-        // sections.forEach((item, index) => {
-        //     if (item.offsetTop - window.pageYOffset <= 200) {
-        //         nav__link.forEach(elem => {
-        //             elem.classList.remove("selected")
-        //         });
-        //         nav__link[index].classList.add("selected");
-        //     }
-        // });
-        // if (window.pageYOffset == sections[2].offsetTop) {
-        //     console.log("ggg");
-        //     nav__link[2].classList.toggle("selected");
-        // }
     });
 
 });
