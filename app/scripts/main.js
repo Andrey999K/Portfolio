@@ -1,7 +1,13 @@
+"use strict";
 document.addEventListener("DOMContentLoaded", () => {
+
     const menu_ = document.querySelector('.nav__list');
     const scrollspy = new VanillaScrollspy(menu_);
     scrollspy.init();
+
+    var wow = new WOW({
+        mobile: false,
+    }).init();
 
     const menu = document.querySelector(".header__menu");
     let header = document.querySelector(".header");
@@ -59,8 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
         alt
     }) {
         const project = document.createElement("li");
-        project.className = "portfolio__list-item";
-        imageJpg = image.replace("webp", "jpg");
+        if (listProject.childElementCount % 2 == 0) {
+            project.className = "portfolio__list-item wow bounceInLeft";
+        } else {
+            project.className = "portfolio__list-item wow bounceInRight";
+        }
+
+        // project.className = "portfolio__list-item wow bounceInLeft"; // lightSpeedInLeft bounceInLeft zoomInDown
+        // project.setAttribute("data-wow-delay", `2s`);
+        const imageJpg = image.replace("webp", "jpg");
         project.insertAdjacentHTML(
             "beforeend",
             `
@@ -84,14 +97,15 @@ document.addEventListener("DOMContentLoaded", () => {
         rating
     }) {
         const skill = document.createElement("li");
-        skill.className = "skill";
+        skill.className = "skill wow bounceInDown"; // flip rubberBand jello
+        skill.setAttribute("data-wow-delay", `${listSkill.childElementCount / 4}s`)
         skill.insertAdjacentHTML("beforeend", `
         <img src="images/${name.toLowerCase()}-logo.svg" alt="${name.toLowerCase()}"
             class="skill__logo">
         <p class="skill__name">${name}</p>
         <img src="images/rating-${rating}.svg" alt="stars"
             class="skill__rating">
-        `)
+        `);
         listSkill.insertAdjacentElement("beforeend", skill);
     }
 
