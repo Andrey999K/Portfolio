@@ -1,0 +1,43 @@
+[{
+        "name": "Piedpiper",
+        "link": "https://andrey999k.github.io/site1/",
+        "image": "./images/piedpiper-1440.webp",
+        "alt": "piedpiper"
+    },
+    {
+        "name": "Simple project",
+        "link": "https://andrey999k.github.io/Level1-Site2/",
+        "image": "./images/simple-project-1440.webp",
+        "alt": "simple-project"
+    },
+    {
+        "name": "Wild acation",
+        "link": "https://andrey999k.github.io/Level2-Site1/build/",
+        "image": "./images/wild-acation-1440.webp",
+        "alt": "wild-acation"
+    },
+    {
+        "name": "newchurchill.ru",
+        "link": "https://andrey999k.github.io/https-newchurchill.ru-/",
+        "image": "./images/newchurchill.ru-1440.webp",
+        "alt": "newchurchill"
+    },
+    {
+        "name": "test-task",
+        "link": "https://andrey999k.github.io/test_task/",
+        "image": "./images/test-task-1440.webp",
+        "alt": "easy garden"
+    },
+    {
+        "name": "YOGA",
+        "link": "https://andrey999k.github.io/Level3-Site1/build/",
+        "image": "./images/YOGA-1440.webp",
+        "alt": "yoga"
+    },
+    {
+        "name": "news-page",
+        "link": "https://andrey999k.github.io/Level2-news-page/build/",
+        "image": "./images/news-page-1440.webp",
+        "alt": "news page"
+    }
+]

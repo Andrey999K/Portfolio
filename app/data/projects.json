@@ -1,19 +1,19 @@
 [{
         "name": "Piedpiper",
         "link": "https://andrey999k.github.io/site1/",
-        "image": "./images/portfolio-piedpiper-1440.webp",
+        "image": "./images/piedpiper-1440.webp",
         "alt": "piedpiper"
     },
     {
         "name": "Simple project",
         "link": "https://andrey999k.github.io/Level1-Site2/",
-        "image": "./images/portfolio-simple-project-1440.webp",
+        "image": "./images/simple-project-1440.webp",
         "alt": "simple-project"
     },
     {
         "name": "Wild acation",
         "link": "https://andrey999k.github.io/Level2-Site1/build/",
-        "image": "./images/portfolio-wild-acation-1440.webp",
+        "image": "./images/wild-acation-1440.webp",
         "alt": "wild-acation"
     },
     {

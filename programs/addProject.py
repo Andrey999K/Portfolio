@@ -15,7 +15,7 @@ class Project:
 text = []
 
 try:
-    f = open('app/data/data.json', 'r')
+    f = open('../app/data/projects.json', 'r')
     fileText = f.read()
     try:
         text = json.loads(fileText)
@@ -37,6 +37,6 @@ text.append(project.__dict__)
 text = json.dumps(text, indent = 4)
 # print(text)
 
-f = open('app/data/data.json', 'w')
+f = open('../app/data/projects.json', 'w')
 f.write(text + '\n')
 f.close()
