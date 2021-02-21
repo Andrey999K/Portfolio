@@ -436,6 +436,14 @@ a:hover {
     color: #070707;
 }
 
+.selected {
+    color: #000000;
+
+    &.nav__link {
+        transform: scale(1.1);
+    }
+}
+
 @media (max-width: 1028px) {
     .skills {
         padding-bottom: 60px;
@@ -521,8 +529,6 @@ a:hover {
         }
     }
 
-
-
     .skills {
         &__list {
             max-width: 260px;
@@ -532,6 +538,13 @@ a:hover {
 
     .skill:last-child {
         margin-bottom: 0;
+    }
+
+    .selected {
+
+        &.nav__link {
+            transform: scale(1.1) translate(20px, 0);
+        }
     }
 }
 
@@ -617,15 +630,6 @@ a:hover {
     visibility: visible;
     // max-width: 300px;
     transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.selected {
-    color: #000000;
-
-    &.nav__link {
-        // font-weight: bold;
-        transform: scale(1.1) translate(20px, 0);
-    }
 }
 
 .lang_visibile {
