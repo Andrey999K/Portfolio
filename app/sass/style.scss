@@ -58,7 +58,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 40px;
+    // margin-top: 40px;
 }
 
 $gray: #828282;
@@ -67,7 +67,7 @@ $black: #070707;
 .header {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 999;
     width: 100%;
     background: #ffffff;
 
@@ -106,8 +106,9 @@ $black: #070707;
 
         &::before {
             position: absolute;
-            top: 2px;
-            left: 55px;
+            // top: 2px;
+            // left: 55px;
+            left: 27px;
             width: 4px;
             height: 30px;
             background: $black;
@@ -155,6 +156,7 @@ $black: #070707;
 
 .section {
     padding: 100px 0;
+    z-index: 1;
 
     &__title {
         text-align: center;
@@ -165,45 +167,64 @@ $black: #070707;
 
 .banner {
     width: 100%;
-    padding: 0;
+    padding: 150px 0;
+    // z-index: -1;
+    background: url("../images/bannerPhoto.jpg") no-repeat fixed center/cover;
 
     &__content {
+        position: relative;
         display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
+        // align-items: flex-end;
+        // justify-content: space-between;
+        flex-direction: column;
         width: 100%;
         max-width: 944px;
-        margin: 0 auto 100px;
-        padding-bottom: 436px;
-        background: url("../images/banner-background-1440-2x.jpg") no-repeat center bottom 0;
-        background-size: 943px 387px;
+        text-shadow: 0 0 4px #fff;
+        // margin: 0 auto 100px;
+        // padding-bottom: 436px;
+        // background: url("../images/banner-background-1440-2x.jpg") no-repeat center bottom 0;
+        // background: url("../images/bannerPhoto.webp") no-repeat center bottom 0;
+        // background-size: 943px 387px;
     }
 
     &__name {
         font-size: 47px;
+
+        span {
+            position: relative;
+            display: inline-block;
+        }
     }
 
     &__description {
         font-size: 18px;
+        margin-top: 20px;
+        max-width: 230px;
+
+        span {
+            position: relative;
+            display: inline-block;
+        }
     }
 
     &__lang {
-        position: relative;
-        bottom: 30px;
-        left: 25px;
+        // position: relative;
+        // bottom: 30px;
+        // left: 25px;
         display: flex;
         justify-content: space-between;
         width: 68px;
         height: 14px;
+        margin-top: 100px;
         color: $gray;
         font-weight: bold;
         font-size: 16px;
         line-height: 16px;
-        transform: rotate(-90deg);
+        // transform: rotate(-90deg);
 
         &::before {
             position: absolute;
-            top: 2px;
+            // top: 2px;
             left: 27px;
             width: 2px;
             height: 15px;
@@ -217,9 +238,16 @@ $black: #070707;
             line-height: 16px;
             font-weight: bold;
             font-size: 16px;
-            background: #fff;
+            background: transparent;
         }
     }
+}
+
+.my-photo {
+    position: fixed;
+    top: 127px;
+    right: 100px;
+    // z-index: -1;
 }
 
 .about-me {
@@ -230,6 +258,7 @@ $black: #070707;
     width: 100%;
     color: $black;
     // height: 506px;
+    z-index: 1;
     background: #f6f6f6;
 
     &__text {
@@ -246,6 +275,7 @@ $black: #070707;
     align-content: space-between;
     align-items: center;
     width: 100%;
+    background: #fff;
     // max-width: 936px+74px * 2;
 
     &__text {
@@ -340,7 +370,9 @@ $black: #070707;
     align-items: center;
     justify-content: space-between;
     // height: 622px;
+    z-index: 1;
     width: 100%;
+    background: #fff;
 
     &__content {
         display: flex;
@@ -436,6 +468,15 @@ a:hover {
     color: #070707;
 }
 
+.selected {
+    color: #000000;
+
+    &.nav__link {
+        // font-weight: bold;
+        transform: scale(1.1);
+    }
+}
+
 @media (max-width: 1028px) {
     .skills {
         padding-bottom: 60px;
@@ -521,8 +562,6 @@ a:hover {
         }
     }
 
-
-
     .skills {
         &__list {
             max-width: 260px;
@@ -532,6 +571,12 @@ a:hover {
 
     .skill:last-child {
         margin-bottom: 0;
+    }
+
+    .selected {
+        &.nav__link {
+            transform: scale(1.1) translate(20px, 0);
+        }
     }
 }
 
@@ -617,15 +662,6 @@ a:hover {
     visibility: visible;
     // max-width: 300px;
     transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.selected {
-    color: #000000;
-
-    &.nav__link {
-        // font-weight: bold;
-        transform: scale(1.1) translate(20px, 0);
-    }
 }
 
 .lang_visibile {

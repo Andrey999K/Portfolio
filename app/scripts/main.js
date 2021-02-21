@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const paragraphs = document.querySelectorAll("p:not(.skill__name)");
     const buttonSend = document.querySelector(".contacts__send");
     const nav__link = document.querySelectorAll(".nav__link");
+    const bannerName = document.querySelector(".banner__name");
+    const bannerDescription = document.querySelector(".banner__description");
 
     // CLOSING THE MENU
     function menuOpenClose() {
@@ -46,6 +48,61 @@ document.addEventListener("DOMContentLoaded", () => {
                 menuOpenClose();
             });
         });
+    } else {
+        bannerName.innerHTML = bannerName.textContent.replace(/\S/g, "<span>$&</span>");
+        let descriptionHtml = bannerDescription.innerHTML.split("<br>");
+        descriptionHtml.splice(1, 0, "<br>");
+        descriptionHtml =
+            descriptionHtml[0].replace(/\S/g, "<span>$&</span>") +
+            descriptionHtml[1] + descriptionHtml[2].replace(/\S/g, "<span>$&</span>");
+        bannerDescription.innerHTML = descriptionHtml;
+
+        // ANIMATION NAME
+        anime.timeline({
+                loop: false
+            })
+
+            .add({
+                targets: '.banner__name span',
+                translateY: [-600, 0],
+                scale: [10, 1],
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 1500,
+                delay: anime.stagger(100, {
+                    start: 1000
+                }),
+            })
+
+        // ANIMATION DESCRIPTION
+        const animation = anime.timeline({
+            targets: '.banner__description span',
+            easeing: 'easeInOutExpo',
+            loop: false,
+        })
+
+        animation
+            .add({
+                rotate: function () {
+                    return anime.random(-360, 360)
+                },
+                translateX: function () {
+                    return anime.random(-1000, 1000)
+                },
+                translateY: function () {
+                    return anime.random(-1000, 1000)
+                },
+                duration: 0,
+                // delay: anime.stagger(20),
+            })
+
+            .add({
+                rotate: 0,
+                translateX: 0,
+                translateY: 0,
+                duration: 5000,
+                delay: anime.stagger(7),
+            })
     }
 
     // FUNCTION TO EXTRACT DATA FROM JSON FILES

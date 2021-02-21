@@ -15,6 +15,7 @@ module.exports = function () {
             .pipe($.plugins.autoprefixer({
                 cascade: true
             })) // прописываем вендорные префиксы
+            // .pipe(webpcss()) // НЕ РАБОТАЕТ
             .pipe($.plugins.csso()) // минифицируем стилевой файл
             .pipe($.plugins.rename({
                 suffix: '.min'
