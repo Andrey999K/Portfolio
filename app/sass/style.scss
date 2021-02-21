@@ -143,9 +143,10 @@ $black: #070707;
     }
 
     &__link {
-        display: block;
+        display: inline-block;
         color: $gray;
-        transition: 0.3s;
+        max-width: 200px;
+        transition: 0.2s;
     }
 
     a.active {
@@ -543,6 +544,7 @@ a:hover {
     .selected {
 
         &.nav__link {
+            margin-left: -10px;
             transform: scale(1.1) translate(20px, 0);
         }
     }
@@ -609,7 +611,7 @@ a:hover {
         &__content {
             // padding-bottom: 478px+38px;
             padding-bottom: 162%;
-            background: url("../images/banner-background-375-2x.jpg") no-repeat center bottom 0;
+            background: url("../images/myPhotoMobile.jpg") no-repeat center bottom 0;
             background-size: contain;
         }
     }
