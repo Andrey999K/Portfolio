@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         header.classList.toggle("header_white");
         header.classList.toggle("header_height");
         header_lang.classList.toggle("lang_visibile");
-        menu.classList.toggle("header__menu-close");
+        menu.classList.toggle("close");
         document.body.classList.toggle("no-scroll");
     };
 
