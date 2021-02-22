@@ -2,11 +2,14 @@ import json
 
 class Skill:
     name = ""
-    rating = 0
+    # rating = 0
 
-    def __init__(self, name, rating):
+    # def __init__(self, name, rating):
+    #     self.name = name
+    #     self.rating = rating
+
+    def __init__(self, name):
         self.name = name
-        self.rating = rating
 
 text = []
 
@@ -21,19 +24,20 @@ try:
 except:
     pass
 
-name = input("Название технологии (навыка): ").upper().replace(" ", "")
-while True:
-    try:
-        rating = int(input("Рейтинг: "))
-        break
-    except:
-        print("Введите число!")
-while rating < 1 or rating > 5:
-    print("Рейтинг не может быть ниже 1 или выше 5 звёзд!")
-    rating = int(input("Рейтинг: "))
+name = input("Название технологии (навыка): ").replace(" ", "")
+# while True:
+#     try:
+#         rating = int(input("Рейтинг: "))
+#         break
+#     except:
+#         print("Введите число!")
+# while rating < 1 or rating > 5:
+#     print("Рейтинг не может быть ниже 1 или выше 5 звёзд!")
+#     rating = int(input("Рейтинг: "))
 
 
-skill = Skill(name, rating)
+# skill = Skill(name, rating)
+skill = Skill(name)
 
 text.append(skill.__dict__)
 

@@ -96,8 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // OUTPUT OF SKILLS ON THE PAGE
     function addSkill({
-        name,
-        rating
+        name
+        // rating
     }) {
         const skill = document.createElement("li");
         skill.className = "skill wow bounceInDown"; // flip rubberBand jello bounceInDown
