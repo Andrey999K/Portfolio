@@ -270,16 +270,18 @@ $black: #070707;
     justify-content: space-between;
     width: 100%;
     max-width: 204px;
-    height: 186px;
+    // height: 186px;
     transition: 0.5s;
 
     &__logo {
         height: 110px;
+        margin-bottom: 20px;
     }
 
     &__name {
         width: 80px;
-        font-size: 14px;
+        // font-size: 14px;
+        font-size: 18px;
         line-height: 17px;
         text-align: center;
     }
