@@ -155,37 +155,8 @@ $black: #070707;
 
     &__lang {
         position: absolute;
-        right: -30px;
-        bottom: 57px;
         display: none;
-        align-items: center;
-        justify-content: space-between;
-        width: 144px;
-        height: 34px;
-        color: $gray;
-        font-weight: bold;
-        font-size: 34px;
-        line-height: 34px;
-        transform: rotate(90deg);
-
-        &::before {
-            position: absolute;
-            top: 2px;
-            left: 55px;
-            width: 4px;
-            height: 30px;
-            background: $black;
-            content: "";
-        }
-
-        &-ru,
-        &-en {
-            color: $gray;
-            line-height: 34px;
-            font-weight: bold;
-            font-size: 34px;
-            background: #fff;
-        }
+        top: 100vh;
     }
 }
 
@@ -540,10 +511,40 @@ a:hover {
         height: 139px;
 
         &__lang {
-            bottom: -150px;
+            position: absolute;
+            right: -30px;
+            top: 100vh;
             display: flex;
             visibility: hidden;
+            align-items: center;
+            justify-content: space-between;
+            width: 144px;
+            height: 34px;
+            color: $gray;
+            font-weight: bold;
+            font-size: 34px;
+            line-height: 34px;
+            transform: rotate(90deg);
             transition: 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+            &::before {
+                position: absolute;
+                top: 2px;
+                left: 55px;
+                width: 4px;
+                height: 30px;
+                background: $black;
+                content: "";
+            }
+
+            &-ru,
+            &-en {
+                color: $gray;
+                line-height: 34px;
+                font-weight: bold;
+                font-size: 34px;
+                background: #fff;
+            }
         }
 
         &__menu {
@@ -608,6 +609,7 @@ a:hover {
     }
 
     .selected {
+        color: #000000;
 
         &.nav__link {
             margin-left: -10px;
@@ -629,7 +631,7 @@ a:hover {
     }
 
     .lang_visibile {
-        bottom: 60px;
+        top: calc(100vh - 204px);
         visibility: visible;
         transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
