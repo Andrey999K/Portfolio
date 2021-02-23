@@ -282,7 +282,6 @@ $black: #070707;
     align-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 100px 0 60px;
     // max-width: 936px+74px * 2;
 
     &__text {
@@ -292,9 +291,12 @@ $black: #070707;
     }
 
     &__list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 40px;
         width: 100%;
     }
 }
@@ -304,10 +306,7 @@ $black: #070707;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    max-width: 204px;
-    // height: 186px;
-    margin-bottom: 40px;
+    width: auto;
     transition: 0.5s;
 
     &__logo {
@@ -488,16 +487,22 @@ a:hover {
 
 @media (max-width: 1028px) {
     .skills {
-        padding-bottom: 60px;
+
+        &__list {
+            max-width: 660px;
+            margin: 0 auto;
+            grid-template-columns: repeat(3, auto);
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .skills {
 
         &__list {
             max-width: 500px;
-            margin: 0 auto;
+            grid-template-columns: repeat(2, auto);
         }
-    }
-
-    .skill {
-        margin-bottom: 40px;
     }
 }
 
@@ -602,14 +607,12 @@ a:hover {
     }
 
     .skills {
-        &__list {
-            max-width: 260px;
-            justify-content: center;
-        }
-    }
 
-    .skill:last-child {
-        margin-bottom: 0;
+        &__list {
+            max-width: 430px;
+            grid-template-columns: auto auto;
+            grid-gap: 40px 30px;
+        }
     }
 
     .selected {
@@ -673,32 +676,14 @@ a:hover {
         }
     }
 
+    .skills {
 
+        &__list {
+            grid-template-columns: 1fr;
+        }
 
-    // .skills {
-    //     max-width: 288px+74px * 2;
+    }
 
-    //     &__list {
-    //         justify-content: center;
-    //         height: 1068px;
-    //     }
-    // }
-
-    // .portfolio {
-    //     &-layout {
-    //         margin-bottom: 36px;
-    //     }
-
-    //     &__link {
-    //         margin-bottom: 78px;
-    //     }
-    // }
-
-    // .contacts {
-    //     &__send {
-    //         margin-bottom: 48px;
-    //     }
-    // }
 }
 
 @media (max-width: 460px) {
