@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }) {
         const skill = document.createElement("li");
         skill.className = "skill wow bounceInDown"; // flip rubberBand jello bounceInDown
-        skill.setAttribute("data-wow-delay", `${listSkill.childElementCount / 4}s`)
+        skill.setAttribute("data-wow-delay", `${listSkill.childElementCount / 8}s`)
         // skill.insertAdjacentHTML("beforeend", `
         // <img src="images/${name.toLowerCase()}-logo.svg" alt="${name.toLowerCase()}"
         //     class="skill__logo">

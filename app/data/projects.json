@@ -1,4 +1,5 @@
-[{
+[
+    {
         "name": "Piedpiper",
         "link": "https://andrey999k.github.io/site1/",
         "image": "./images/piedpiper-1440.webp",
@@ -17,10 +18,28 @@
         "alt": "wild-acation"
     },
     {
+        "name": "Batman promo",
+        "link": "https://andrey999k.github.io/Glo-Academy-HTML-CSS-25.03.2020-Batman-promo-/",
+        "image": "images/batman-promo-1440.jpg",
+        "alt": "batman"
+    },
+    {
+        "name": "Halloween",
+        "link": "https://andrey999k.github.io/Frontend-Blok-Super-Start-2.0/",
+        "image": "images/halloween-1440.jpg",
+        "alt": "halloween"
+    },
+    {
         "name": "newchurchill.ru",
         "link": "https://andrey999k.github.io/https-newchurchill.ru-/",
         "image": "./images/newchurchill.ru-1440.webp",
         "alt": "newchurchill"
+    },
+    {
+        "name": "Delivery food",
+        "link": "https://andrey999k.github.io/Glo-Academy-HTML-CSS-7.04.2020-Delivery-Food-/",
+        "image": "images/delivery-food-1440.jpg",
+        "alt": "delivery food"
     },
     {
         "name": "test-task",
@@ -39,5 +58,11 @@
         "link": "https://andrey999k.github.io/Level2-news-page/build/",
         "image": "./images/news-page-1440.webp",
         "alt": "news page"
+    },
+    {
+        "name": "My first project",
+        "link": "https://andrey999k.github.io/MyFirstProject/",
+        "image": "images/my-first-project-1440.jpg",
+        "alt": "andrey kutuzov"
     }
 ]
