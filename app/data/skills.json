@@ -27,5 +27,8 @@
     },
     {
         "name": "Gulp"
+    },
+    {
+        "name": "MySQL"
     }
 ]
